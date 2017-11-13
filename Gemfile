@@ -4,9 +4,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
+gem 'pg'
 # Use mysql2 as the database for Active Record
-gem 'mysql2', '0.3.17'
+# gem 'mysql2', '0.3.17'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -45,6 +45,13 @@ gem 'bundler'
 
 group :development do
   gem 'pry-rails'
+  # Use Capistrano for deployment
+  gem 'capistrano', "3.6.1"
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
+  gem 'capistrano-passenger'
 end
 
 group :development, :test do

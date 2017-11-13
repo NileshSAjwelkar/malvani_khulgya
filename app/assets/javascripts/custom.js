@@ -4,7 +4,7 @@
 /*
 Theme by: WebThemez.com
 Note: Please use our back link in your site
-*/
+*/	
 
 $('document').ready(function () {
 	 $.backstretch([
@@ -27,7 +27,7 @@ $('document').ready(function () {
 });
 
 $(function() {
-  var nextYear = "2017/01/01 00:00:00 GMT+0530";
+  var nextYear = "2018/01/01 00:00:00 GMT+0530";
   var htmlTemp = "<div>%D<span>day%!d</span></div><div>%H<span>hrs</span></div><div>%M<span>min</span></div><div>%S<span>sec</span></div>";
     
   $('.countdown.styled').countdown(nextYear, function(event) {
