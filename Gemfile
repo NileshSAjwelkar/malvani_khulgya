@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'sqlite3'
 # Use mysql2 as the database for Active Record
 # gem 'mysql2', '0.3.17'
 
@@ -59,9 +59,14 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
+group :production do
+  gem 'pg'
+end
+
+
 group :test do
   gem 'shoulda-matchers'
-  gem 'cucumber-rails', require: false
+  # gem 'cucumber-rails', require: false
   gem 'database_cleaner'
 end
 
