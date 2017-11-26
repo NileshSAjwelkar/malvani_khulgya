@@ -11,10 +11,15 @@
 #   timeout: 5000
 
 development:
-  adapter: sqlite3
+  # <<: *default
+  database: malvani_khulgya_prod
+  adapter: postgresql
+  encoding: unicode
+  username: malvanikhulgya
+  password: k_malvani5210!
+  host: malvani-khulgya-prod.cngymwigjt1u.us-east-2.rds.amazonaws.com
   pool: 5
-  timeout: 5000
-  database: malvani_khulgya_dev
+  timeout: 5000  
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -24,6 +29,17 @@ test:
   pool: 5
   timeout: 5000
   database: malvani_khulgya_test
+
+staging:
+  # <<: *default
+  database: malvani_khulgya_prod
+  adapter: postgresql
+  encoding: unicode
+  username: malvanikhulgya
+  password: k_malvani5210!
+  host: malvani-khulgya-prod.cngymwigjt1u.us-east-2.rds.amazonaws.com
+  pool: 5
+  timeout: 5000  
 
 production:
   # <<: *default
