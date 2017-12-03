@@ -36,6 +36,7 @@ gem 'spring', group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'backstretch-rails'
 gem 'bundler'
+gem 'pg', '0.20'
 
 group :development do
   gem 'pry-rails'
@@ -55,7 +56,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '0.20'
+  
 end
 
 
