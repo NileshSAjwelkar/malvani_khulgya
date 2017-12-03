@@ -4,18 +4,6 @@ require "capistrano/setup"
 # Include default deployment tasks
 require "capistrano/deploy"
 
-# Include capistrano-rails
-require 'capistrano/rbenv'
- 
-set :rbenv_type, :user
-set :rbenv_ruby, ‘2.1.3’
- 
-require 'capistrano/rails'
-require 'capistrano/rails/assets'
-require 'capistrano/rails/migrations'
-require 'capistrano/bundler'
-require 'capistrano3/unicorn'
-
 # Include tasks from other gems included in your Gemfile
 #
 # For documentation on these, see for example:
@@ -27,14 +15,17 @@ require 'capistrano3/unicorn'
 #   https://github.com/capistrano/rails
 #   https://github.com/capistrano/passenger
 #
-# require 'capistrano/rvm'
+require 'capistrano/rvm'
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
 # require 'capistrano/bundler'
 # require 'capistrano/rails/assets'
 # require 'capistrano/rails/migrations'
 # require 'capistrano/passenger'
+require 'capistrano/bundler'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
+require 'capistrano/puma'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
-set :linked_files, %w{config/secrets.yml config/database.yml}
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
