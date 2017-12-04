@@ -2,7 +2,7 @@
 lock '3.6.1'
 
 set :application, 'malvani_khulgya'
-set :repo_url, 'git@github.com:NileshAjwelkar/malvani_khulgya.git' # Edit this to match your repository
+set :repo_url, 'git@bitbucket.org:NileshAjwelkar/malvani_khulgya.git' # Edit this to match your repository
 set :branch, :master
 set :deploy_to, '/home/deploy/malvani_khulgya'
 set :pty, true
