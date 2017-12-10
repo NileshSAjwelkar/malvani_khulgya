@@ -36,7 +36,7 @@ gem 'spring', group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'backstretch-rails'
 gem 'bundler'
-gem 'pg', '0.20'
+
 
 group :development do
   gem 'pry-rails'
@@ -44,10 +44,12 @@ group :development do
   gem 'sqlite3'
   # Use Capistrano for deployment
   gem 'capistrano'
-  gem 'capistrano3-puma'
+  gem 'capistrano-ssh-doctor', '~> 1.0'
+  # gem 'capistrano3-puma'
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm'
+  gem 'dotenv-rails'
 end
 
 group :development, :test do
@@ -56,7 +58,7 @@ group :development, :test do
 end
 
 group :production do
-  
+  gem 'pg', '0.20'  
 end
 
 

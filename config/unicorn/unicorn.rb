@@ -1,11 +1,19 @@
-rails_root = File.expand_path(‘../../’, __FILE__)
-rails_env = ENV[‘RAILS_ENV’] || “development”
+# set path to the application
+app_dir git File.expand_path("../..", __FILE__)
+shared_dir = "#{app_dir}/shared"
+working_directory app_dir
 
+# Set unicorn options
 worker_processes 2
-working_directory rails_root
+preload_app true
+timeout 30
 
-listen “#{rails_root}/tmp/unicorn.sock”
-pid “#{rails_root}/tmp/unicorn.pid”
+# Path for the Unicorn socket
+listen "#{shared_dir}/sockets/unicorn.sock", :backlog => 64
 
-stderr_path “#{rails_root}/log/#{rails_env}_unicorn_error.log”
-stdout_path “#{rails_root}/log/#{rails_env}_unicorn.log”
+# Set path for logging
+stderr_path "#{shared_dir}/log/unicorn.stderr.log"
+stdout_path "#{shared_dir}/log/unicorn.stdout.log"
+
+# Set proccess id path
+pid "#{shared_dir}/pids/unicorn.pid"
