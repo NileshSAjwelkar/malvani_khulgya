@@ -756,3 +756,785 @@
  DEBUG [0260837a] 	
  DEBUG [0260837a] 	(See full trace by running task with --trace)
  DEBUG [0260837a] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-12-10 22:23:53 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bb015448] Running ~/.rvm/bin/rvm version as deploy@18.216.24.164
+ DEBUG [bb015448] Command: ~/.rvm/bin/rvm version
+ DEBUG [bb015448] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [bb015448] 	
+ DEBUG [bb015448] Finished in 13.537 seconds with exit status 0 (successful).
+ DEBUG [fe664676] Running ~/.rvm/bin/rvm current as deploy@18.216.24.164
+ DEBUG [fe664676] Command: ~/.rvm/bin/rvm current
+ DEBUG [fe664676] 	ruby-2.3.3
+ DEBUG [fe664676] 	
+ DEBUG [fe664676] Finished in 6.347 seconds with exit status 0 (successful).
+ DEBUG [3d87673c] Running ~/.rvm/bin/rvm ruby-2.3.3 do ruby --version as deploy@18.216.24.164
+ DEBUG [3d87673c] Command: ~/.rvm/bin/rvm ruby-2.3.3 do ruby --version
+ DEBUG [3d87673c] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [3d87673c] 	
+ DEBUG [3d87673c] Finished in 5.023 seconds with exit status 0 (successful).
+  INFO [801fbff2] Running /usr/bin/env mkdir -p /tmp as deploy@18.216.24.164
+ DEBUG [801fbff2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [801fbff2] Finished in 1.245 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-malvani_khulgya-production-nileshaju.sh 0.0%
+  INFO Uploading /tmp/git-ssh-malvani_khulgya-production-nileshaju.sh 100.0%
+  INFO [3ae74ce9] Running /usr/bin/env chmod 700 /tmp/git-ssh-malvani_khulgya-production-nileshaju.sh as deploy@18.216.24.164
+ DEBUG [3ae74ce9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-malvani_khulgya-production-nileshaju.sh
+  INFO [3ae74ce9] Finished in 2.390 seconds with exit status 0 (successful).
+  INFO [7662c382] Running /usr/bin/env git ls-remote --heads https://github.com/NileshSAjwelkar/malvani_khulgya.git as deploy@18.216.24.164
+ DEBUG [7662c382] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-malvani_khulgya-production-nileshaju.sh" ; /usr/bin/env git ls-remote --heads https://github.com/NileshSAjwelkar/malvani_khulgya.git )
+ DEBUG [7662c382] 	3cef6611092307b45e23ed0cdd727fdb39e2b6c2
+ DEBUG [7662c382] 		refs/heads/master
+  INFO [7662c382] Finished in 1.676 seconds with exit status 0 (successful).
+  INFO [c4968fb5] Running /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/shared /home/deploy/malvani_khulgya/releases as deploy@18.216.24.164
+ DEBUG [c4968fb5] Command: /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/shared /home/deploy/malvani_khulgya/releases
+  INFO [c4968fb5] Finished in 0.750 seconds with exit status 0 (successful).
+  INFO [6b3f043a] Running /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/shared/public/assets as deploy@18.216.24.164
+ DEBUG [6b3f043a] Command: /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/shared/public/assets
+  INFO [6b3f043a] Finished in 0.748 seconds with exit status 0 (successful).
+ DEBUG [33a6dc2d] Running [ -f /home/deploy/malvani_khulgya/current/REVISION ] as deploy@18.216.24.164
+ DEBUG [33a6dc2d] Command: [ -f /home/deploy/malvani_khulgya/current/REVISION ]
+ DEBUG [33a6dc2d] Finished in 0.761 seconds with exit status 1 (failed).
+ DEBUG [10b329da] Running [ -f /home/deploy/malvani_khulgya/repo/HEAD ] as deploy@18.216.24.164
+ DEBUG [10b329da] Command: [ -f /home/deploy/malvani_khulgya/repo/HEAD ]
+ DEBUG [10b329da] Finished in 0.834 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/malvani_khulgya/repo
+ DEBUG [9b246fb7] Running if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [9b246fb7] Command: if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi
+ DEBUG [9b246fb7] Finished in 0.744 seconds with exit status 0 (successful).
+  INFO [6a283a05] Running /usr/bin/env git remote update --prune as deploy@18.216.24.164
+ DEBUG [6a283a05] Command: cd /home/deploy/malvani_khulgya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-malvani_khulgya-production-nileshaju.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [6a283a05] 	Fetching origin
+ DEBUG [6a283a05] 	
+ DEBUG [6a283a05] 	remote: Counting objects: 22, done.[K
+ DEBUG [6a283a05] 	
+ DEBUG [6a283a05] 	remote: Compressing objects:  12% (1/8)   [K
+ DEBUG [6a283a05] 	remote: Compressing objects:  25% (2/8)   [K
+ DEBUG [6a283a05] 	remote: Compressing objects:  37% (3/8)   [K
+ DEBUG [6a283a05] 	remote: Compressing objects:  50% (4/8)   [K
+ DEBUG [6a283a05] 	remote: Compressing objects:  62% (5/8)   [K
+ DEBUG [6a283a05] 	remote: Compressing objects:  75% (6/8)   [K
+ DEBUG [6a283a05] 	remote: Compressing objects:  87% (7/8)   [K
+ DEBUG [6a283a05] 	remote: Compressing objects: 100% (8/8)   [K
+ DEBUG [6a283a05] 	remote: Compressing objects: 100% (8/8), done.[K
+ DEBUG [6a283a05] 	
+ DEBUG [6a283a05] 	remote: Total 22 (delta 11), reused 22 (delta 11), pack-reused 0[K
+ DEBUG [6a283a05] 	
+ DEBUG [6a283a05] 	Unpacking objects:   4% (1/22)   
+ DEBUG [6a283a05] 	Unpacking objects:   9% (2/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  13% (3/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  18% (4/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  22% (5/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  27% (6/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  31% (7/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  36% (8/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  40% (9/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  45% (10/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  50% (11/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  54% (12/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  59% (13/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  63% (14/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  68% (15/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  72% (16/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  77% (17/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  81% (18/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  86% (19/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  90% (20/22)   
+ DEBUG [6a283a05] 	Unpacking objects:  95% (21/22)   
+ DEBUG [6a283a05] 	Unpacking objects: 100% (22/22)   
+ DEBUG [6a283a05] 	Unpacking objects: 100% (22/22), done.
+ DEBUG [6a283a05] 	
+ DEBUG [6a283a05] 	From https://github.com/NileshSAjwelkar/malvani_khulgya
+ DEBUG [6a283a05] 	
+ DEBUG [6a283a05] 	   12fa95c..3cef661  master     -> master
+ DEBUG [6a283a05] 	
+  INFO [6a283a05] Finished in 2.009 seconds with exit status 0 (successful).
+ DEBUG [2b23cb90] Running if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [2b23cb90] Command: if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi
+ DEBUG [2b23cb90] Finished in 1.675 seconds with exit status 0 (successful).
+  INFO [411a5240] Running /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/releases/20171210165431 as deploy@18.216.24.164
+ DEBUG [411a5240] Command: cd /home/deploy/malvani_khulgya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-malvani_khulgya-production-nileshaju.sh" ; /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/releases/20171210165431 )
+  INFO [411a5240] Finished in 1.619 seconds with exit status 0 (successful).
+  INFO [4944a9e5] Running /usr/bin/env git archive master | tar -x -f - -C /home/deploy/malvani_khulgya/releases/20171210165431 as deploy@18.216.24.164
+ DEBUG [4944a9e5] Command: cd /home/deploy/malvani_khulgya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-malvani_khulgya-production-nileshaju.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/deploy/malvani_khulgya/releases/20171210165431 )
+  INFO [4944a9e5] Finished in 0.794 seconds with exit status 0 (successful).
+ DEBUG [ba38e76f] Running if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [ba38e76f] Command: if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi
+ DEBUG [ba38e76f] Finished in 0.813 seconds with exit status 0 (successful).
+ DEBUG [62534c13] Running /usr/bin/env git rev-list --max-count=1 master as deploy@18.216.24.164
+ DEBUG [62534c13] Command: cd /home/deploy/malvani_khulgya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-malvani_khulgya-production-nileshaju.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [62534c13] 	3cef6611092307b45e23ed0cdd727fdb39e2b6c2
+ DEBUG [62534c13] 	
+ DEBUG [62534c13] Finished in 1.279 seconds with exit status 0 (successful).
+ DEBUG [cbc81d9d] Running if test ! -d /home/deploy/malvani_khulgya/releases/20171210165431; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210165431'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [cbc81d9d] Command: if test ! -d /home/deploy/malvani_khulgya/releases/20171210165431; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210165431'" 1>&2; false; fi
+ DEBUG [cbc81d9d] Finished in 2.219 seconds with exit status 0 (successful).
+  INFO [e1ffab3c] Running /usr/bin/env echo "3cef6611092307b45e23ed0cdd727fdb39e2b6c2" >> REVISION as deploy@18.216.24.164
+ DEBUG [e1ffab3c] Command: cd /home/deploy/malvani_khulgya/releases/20171210165431 && /usr/bin/env echo "3cef6611092307b45e23ed0cdd727fdb39e2b6c2" >> REVISION
+  INFO [e1ffab3c] Finished in 2.049 seconds with exit status 0 (successful).
+  INFO [069f86d6] Running /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/releases/20171210165431/public as deploy@18.216.24.164
+ DEBUG [069f86d6] Command: /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/releases/20171210165431/public
+  INFO [069f86d6] Finished in 1.737 seconds with exit status 0 (successful).
+ DEBUG [63b1c48c] Running [ -L /home/deploy/malvani_khulgya/releases/20171210165431/public/assets ] as deploy@18.216.24.164
+ DEBUG [63b1c48c] Command: [ -L /home/deploy/malvani_khulgya/releases/20171210165431/public/assets ]
+ DEBUG [63b1c48c] Finished in 2.048 seconds with exit status 1 (failed).
+ DEBUG [87011bda] Running [ -d /home/deploy/malvani_khulgya/releases/20171210165431/public/assets ] as deploy@18.216.24.164
+ DEBUG [87011bda] Command: [ -d /home/deploy/malvani_khulgya/releases/20171210165431/public/assets ]
+ DEBUG [87011bda] Finished in 2.758 seconds with exit status 1 (failed).
+  INFO [b4dc3e79] Running /usr/bin/env ln -s /home/deploy/malvani_khulgya/shared/public/assets /home/deploy/malvani_khulgya/releases/20171210165431/public/assets as deploy@18.216.24.164
+ DEBUG [b4dc3e79] Command: /usr/bin/env ln -s /home/deploy/malvani_khulgya/shared/public/assets /home/deploy/malvani_khulgya/releases/20171210165431/public/assets
+  INFO [b4dc3e79] Finished in 2.153 seconds with exit status 0 (successful).
+ DEBUG [5f6e2751] Running if test ! -d /home/deploy/malvani_khulgya/releases/20171210165431; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210165431'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [5f6e2751] Command: if test ! -d /home/deploy/malvani_khulgya/releases/20171210165431; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210165431'" 1>&2; false; fi
+ DEBUG [5f6e2751] Finished in 1.810 seconds with exit status 0 (successful).
+ DEBUG [329e3206] Running ~/.rvm/bin/rvm ruby-2.3.3 do bundle check --path /home/deploy/malvani_khulgya/shared/bundle as deploy@18.216.24.164
+ DEBUG [329e3206] Command: cd /home/deploy/malvani_khulgya/releases/20171210165431 && ~/.rvm/bin/rvm ruby-2.3.3 do bundle check --path /home/deploy/malvani_khulgya/shared/bundle
+ DEBUG [329e3206] 	[33mThe git source `git://github.com/ryanto/acts_as_votable.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31mThe following gems are missing[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * sshkit (1.15.1)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * airbrussh (1.3.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * capistrano (3.6.1)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * capistrano-bundler (1.3.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * capistrano-rails (1.3.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * capistrano-ssh-doctor (1.0.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * coderay (1.1.2)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * dotenv (2.2.1)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * dotenv-rails (2.2.1)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * factory_girl (4.9.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * factory_girl_rails (4.9.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * method_source (0.9.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * pry (0.11.3)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * pry-rails (0.3.6)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * rspec-support (3.7.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * rspec-core (3.7.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * rspec-expectations (3.7.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * rspec-mocks (3.7.0)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * rspec-rails (3.7.1)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * spring (1.7.2)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[31m * sqlite3 (1.3.13)[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [329e3206] 	
+ DEBUG [329e3206] Finished in 1.437 seconds with exit status 1 (failed).
+  INFO [a5bf7ce4] Running ~/.rvm/bin/rvm ruby-2.3.3 do bundle install --path /home/deploy/malvani_khulgya/shared/bundle --without development test --deployment --quiet as deploy@18.216.24.164
+ DEBUG [a5bf7ce4] Command: cd /home/deploy/malvani_khulgya/releases/20171210165431 && ~/.rvm/bin/rvm ruby-2.3.3 do bundle install --path /home/deploy/malvani_khulgya/shared/bundle --without development test --deployment --quiet
+  INFO [a5bf7ce4] Finished in 2.279 seconds with exit status 0 (successful).
+ DEBUG [5d0ae50e] Running if test ! -d /home/deploy/malvani_khulgya/releases/20171210165431; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210165431'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [5d0ae50e] Command: if test ! -d /home/deploy/malvani_khulgya/releases/20171210165431; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210165431'" 1>&2; false; fi
+ DEBUG [5d0ae50e] Finished in 1.113 seconds with exit status 0 (successful).
+  INFO [f261e973] Running ~/.rvm/bin/rvm ruby-2.3.3 do bundle exec rake assets:precompile as deploy@18.216.24.164
+ DEBUG [f261e973] Command: cd /home/deploy/malvani_khulgya/releases/20171210165431 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm ruby-2.3.3 do bundle exec rake assets:precompile )
+ DEBUG [f261e973] 	rake aborted!
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	Bundler::GemRequireError: There was an error while trying to load the gem 'uglifier'.
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	Gem Load Error is: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	Backtrace for gem load error is:
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs/runtimes.rb:58:in `autodetect'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs.rb:5:in `<module:ExecJS>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs.rb:4:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:81:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:81:in `block (2 levels) in require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:76:in `each'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:76:in `block in require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:65:in `each'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:65:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler.rb:114:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/releases/20171210165431/config/application.rb:7:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/releases/20171210165431/Rakefile:4:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/releases/20171210165431/Rakefile:4:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/lib/rake/rake_module.rb:29:in `load'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/lib/rake/rake_module.rb:29:in `load_rakefile'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/lib/rake/application.rb:70
+ DEBUG [f261e973] 	3:in `raw_load_rakefile'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/lib/rake/application.rb:104:in `block in load_rakefile'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/lib/rake/application.rb:186:in `standard_exception_handling'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/lib/rake/application.rb:103:in `load_rakefile'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/lib/rake/application.rb:82:in `block in run'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/lib/rake/application.rb:186:in `standard_exception_handling'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/lib/rake/application.rb:80:in `run'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/bin/rake:22:in `load'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/bin/rake:22:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/rub
+ DEBUG [f261e973] 	y-2.3.3/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `load'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `<main>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	Bundler Error Backtrace:
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:84:in `rescue in block (2 levels) in require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:80:in `block (2 levels) in require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:76:in `each'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:76:in `block in require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:65:in `each'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:65:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler.rb:114:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/releases/20171210165431/config/application.rb:7:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/releases/20171210165431/Rakefile:4:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/releases/20171210165431/Rakefile:4:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:18
+ DEBUG [f261e973] 	:in `start'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `load'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `<main>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	Caused by:
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	ExecJS::RuntimeUnavailable: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs/runtimes.rb:58:in `autodetect'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs.rb:5:in `<module:ExecJS>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs.rb:4:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:81:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:81:in `block (2 levels) in require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:76:in `each'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:76:in `block in require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:65:in `each'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/runtime.rb:65:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler.rb:114:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/releases/20171210165431/config/application.rb:7:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/releases/20171210165431/Rakefile:4:in `require'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/releases/20171210165431/Rakefile:4:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.r
+ DEBUG [f261e973] 	b:27:in `run'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `load'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `<main>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [f261e973] 	
+ DEBUG [f261e973] 	(See full trace by running task with --trace)
+ DEBUG [f261e973] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-12-10 22:31:08 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [723dbcb7] Running ~/.rvm/bin/rvm version as deploy@18.216.24.164
+ DEBUG [723dbcb7] Command: ~/.rvm/bin/rvm version
+ DEBUG [723dbcb7] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [723dbcb7] 	
+ DEBUG [723dbcb7] Finished in 3.622 seconds with exit status 0 (successful).
+ DEBUG [04f86710] Running ~/.rvm/bin/rvm current as deploy@18.216.24.164
+ DEBUG [04f86710] Command: ~/.rvm/bin/rvm current
+ DEBUG [04f86710] 	ruby-2.3.3
+ DEBUG [04f86710] 	
+ DEBUG [04f86710] Finished in 1.716 seconds with exit status 0 (successful).
+ DEBUG [877179be] Running ~/.rvm/bin/rvm ruby-2.3.3 do ruby --version as deploy@18.216.24.164
+ DEBUG [877179be] Command: ~/.rvm/bin/rvm ruby-2.3.3 do ruby --version
+ DEBUG [877179be] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [877179be] 	
+ DEBUG [877179be] Finished in 0.992 seconds with exit status 0 (successful).
+  INFO [2c1f2d5a] Running /usr/bin/env mkdir -p /tmp as deploy@18.216.24.164
+ DEBUG [2c1f2d5a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2c1f2d5a] Finished in 0.748 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-malvani_khulgya-production-nileshaju.sh 0.0%
+  INFO Uploading /tmp/git-ssh-malvani_khulgya-production-nileshaju.sh 100.0%
+  INFO [7cf78aad] Running /usr/bin/env chmod 700 /tmp/git-ssh-malvani_khulgya-production-nileshaju.sh as deploy@18.216.24.164
+ DEBUG [7cf78aad] Command: /usr/bin/env chmod 700 /tmp/git-ssh-malvani_khulgya-production-nileshaju.sh
+  INFO [7cf78aad] Finished in 1.196 seconds with exit status 0 (successful).
+  INFO [3fb4ade3] Running /usr/bin/env git ls-remote --heads https://github.com/NileshSAjwelkar/malvani_khulgya.git as deploy@18.216.24.164
+ DEBUG [3fb4ade3] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-malvani_khulgya-production-nileshaju.sh" ; /usr/bin/env git ls-remote --heads https://github.com/NileshSAjwelkar/malvani_khulgya.git )
+ DEBUG [3fb4ade3] 	3cef6611092307b45e23ed0cdd727fdb39e2b6c2
+ DEBUG [3fb4ade3] 		refs/heads/master
+  INFO [3fb4ade3] Finished in 2.549 seconds with exit status 0 (successful).
+  INFO [f6a5e096] Running /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/shared /home/deploy/malvani_khulgya/releases as deploy@18.216.24.164
+ DEBUG [f6a5e096] Command: /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/shared /home/deploy/malvani_khulgya/releases
+  INFO [f6a5e096] Finished in 0.789 seconds with exit status 0 (successful).
+  INFO [2248154f] Running /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/shared/public/assets as deploy@18.216.24.164
+ DEBUG [2248154f] Command: /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/shared/public/assets
+  INFO [2248154f] Finished in 0.744 seconds with exit status 0 (successful).
+ DEBUG [7a21f894] Running [ -f /home/deploy/malvani_khulgya/current/REVISION ] as deploy@18.216.24.164
+ DEBUG [7a21f894] Command: [ -f /home/deploy/malvani_khulgya/current/REVISION ]
+ DEBUG [7a21f894] Finished in 1.563 seconds with exit status 1 (failed).
+ DEBUG [555b70d5] Running [ -f /home/deploy/malvani_khulgya/repo/HEAD ] as deploy@18.216.24.164
+ DEBUG [555b70d5] Command: [ -f /home/deploy/malvani_khulgya/repo/HEAD ]
+ DEBUG [555b70d5] Finished in 0.860 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/malvani_khulgya/repo
+ DEBUG [df319655] Running if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [df319655] Command: if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi
+ DEBUG [df319655] Finished in 1.203 seconds with exit status 0 (successful).
+  INFO [07e2cf78] Running /usr/bin/env git remote update --prune as deploy@18.216.24.164
+ DEBUG [07e2cf78] Command: cd /home/deploy/malvani_khulgya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-malvani_khulgya-production-nileshaju.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [07e2cf78] 	Fetching origin
+ DEBUG [07e2cf78] 	
+  INFO [07e2cf78] Finished in 0.958 seconds with exit status 0 (successful).
+ DEBUG [85c77b14] Running if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [85c77b14] Command: if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi
+ DEBUG [85c77b14] Finished in 1.074 seconds with exit status 0 (successful).
+  INFO [8907bbaf] Running /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/releases/20171210170124 as deploy@18.216.24.164
+ DEBUG [8907bbaf] Command: cd /home/deploy/malvani_khulgya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-malvani_khulgya-production-nileshaju.sh" ; /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/releases/20171210170124 )
+  INFO [8907bbaf] Finished in 0.826 seconds with exit status 0 (successful).
+  INFO [a9bd25b3] Running /usr/bin/env git archive master | tar -x -f - -C /home/deploy/malvani_khulgya/releases/20171210170124 as deploy@18.216.24.164
+ DEBUG [a9bd25b3] Command: cd /home/deploy/malvani_khulgya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-malvani_khulgya-production-nileshaju.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/deploy/malvani_khulgya/releases/20171210170124 )
+  INFO [a9bd25b3] Finished in 1.642 seconds with exit status 0 (successful).
+ DEBUG [12453a30] Running if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [12453a30] Command: if test ! -d /home/deploy/malvani_khulgya/repo; then echo "Directory does not exist '/home/deploy/malvani_khulgya/repo'" 1>&2; false; fi
+ DEBUG [12453a30] Finished in 1.629 seconds with exit status 0 (successful).
+ DEBUG [decf2379] Running /usr/bin/env git rev-list --max-count=1 master as deploy@18.216.24.164
+ DEBUG [decf2379] Command: cd /home/deploy/malvani_khulgya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-malvani_khulgya-production-nileshaju.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [decf2379] 	3cef6611092307b45e23ed0cdd727fdb39e2b6c2
+ DEBUG [decf2379] 	
+ DEBUG [decf2379] Finished in 1.235 seconds with exit status 0 (successful).
+ DEBUG [eb8d5f3a] Running if test ! -d /home/deploy/malvani_khulgya/releases/20171210170124; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210170124'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [eb8d5f3a] Command: if test ! -d /home/deploy/malvani_khulgya/releases/20171210170124; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210170124'" 1>&2; false; fi
+ DEBUG [eb8d5f3a] Finished in 1.636 seconds with exit status 0 (successful).
+  INFO [920bfb94] Running /usr/bin/env echo "3cef6611092307b45e23ed0cdd727fdb39e2b6c2" >> REVISION as deploy@18.216.24.164
+ DEBUG [920bfb94] Command: cd /home/deploy/malvani_khulgya/releases/20171210170124 && /usr/bin/env echo "3cef6611092307b45e23ed0cdd727fdb39e2b6c2" >> REVISION
+  INFO [920bfb94] Finished in 0.742 seconds with exit status 0 (successful).
+  INFO [c76728bd] Running /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/releases/20171210170124/public as deploy@18.216.24.164
+ DEBUG [c76728bd] Command: /usr/bin/env mkdir -p /home/deploy/malvani_khulgya/releases/20171210170124/public
+  INFO [c76728bd] Finished in 0.742 seconds with exit status 0 (successful).
+ DEBUG [1fe32458] Running [ -L /home/deploy/malvani_khulgya/releases/20171210170124/public/assets ] as deploy@18.216.24.164
+ DEBUG [1fe32458] Command: [ -L /home/deploy/malvani_khulgya/releases/20171210170124/public/assets ]
+ DEBUG [1fe32458] Finished in 0.743 seconds with exit status 1 (failed).
+ DEBUG [5860d69c] Running [ -d /home/deploy/malvani_khulgya/releases/20171210170124/public/assets ] as deploy@18.216.24.164
+ DEBUG [5860d69c] Command: [ -d /home/deploy/malvani_khulgya/releases/20171210170124/public/assets ]
+ DEBUG [5860d69c] Finished in 0.740 seconds with exit status 1 (failed).
+  INFO [8b4c66a5] Running /usr/bin/env ln -s /home/deploy/malvani_khulgya/shared/public/assets /home/deploy/malvani_khulgya/releases/20171210170124/public/assets as deploy@18.216.24.164
+ DEBUG [8b4c66a5] Command: /usr/bin/env ln -s /home/deploy/malvani_khulgya/shared/public/assets /home/deploy/malvani_khulgya/releases/20171210170124/public/assets
+  INFO [8b4c66a5] Finished in 0.745 seconds with exit status 0 (successful).
+ DEBUG [e4d0fff6] Running if test ! -d /home/deploy/malvani_khulgya/releases/20171210170124; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210170124'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [e4d0fff6] Command: if test ! -d /home/deploy/malvani_khulgya/releases/20171210170124; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210170124'" 1>&2; false; fi
+ DEBUG [e4d0fff6] Finished in 0.785 seconds with exit status 0 (successful).
+ DEBUG [e8210f36] Running ~/.rvm/bin/rvm ruby-2.3.3 do bundle check --path /home/deploy/malvani_khulgya/shared/bundle as deploy@18.216.24.164
+ DEBUG [e8210f36] Command: cd /home/deploy/malvani_khulgya/releases/20171210170124 && ~/.rvm/bin/rvm ruby-2.3.3 do bundle check --path /home/deploy/malvani_khulgya/shared/bundle
+ DEBUG [e8210f36] 	[33mThe git source `git://github.com/ryanto/acts_as_votable.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31mThe following gems are missing[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * sshkit (1.15.1)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * airbrussh (1.3.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * capistrano (3.6.1)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * capistrano-bundler (1.3.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * capistrano-rails (1.3.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * capistrano-ssh-doctor (1.0.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * coderay (1.1.2)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * dotenv (2.2.1)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * dotenv-rails (2.2.1)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * factory_girl (4.9.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * factory_girl_rails (4.9.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * method_source (0.9.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * pry (0.11.3)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * pry-rails (0.3.6)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * rspec-support (3.7.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * rspec-core (3.7.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * rspec-expectations (3.7.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * rspec-mocks (3.7.0)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * rspec-rails (3.7.1)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * spring (1.7.2)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[31m * sqlite3 (1.3.13)[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [e8210f36] 	
+ DEBUG [e8210f36] Finished in 1.512 seconds with exit status 1 (failed).
+  INFO [32833d12] Running ~/.rvm/bin/rvm ruby-2.3.3 do bundle install --path /home/deploy/malvani_khulgya/shared/bundle --without development test --deployment --quiet as deploy@18.216.24.164
+ DEBUG [32833d12] Command: cd /home/deploy/malvani_khulgya/releases/20171210170124 && ~/.rvm/bin/rvm ruby-2.3.3 do bundle install --path /home/deploy/malvani_khulgya/shared/bundle --without development test --deployment --quiet
+  INFO [32833d12] Finished in 1.648 seconds with exit status 0 (successful).
+ DEBUG [ae200848] Running if test ! -d /home/deploy/malvani_khulgya/releases/20171210170124; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210170124'" 1>&2; false; fi as deploy@18.216.24.164
+ DEBUG [ae200848] Command: if test ! -d /home/deploy/malvani_khulgya/releases/20171210170124; then echo "Directory does not exist '/home/deploy/malvani_khulgya/releases/20171210170124'" 1>&2; false; fi
+ DEBUG [ae200848] Finished in 0.929 seconds with exit status 0 (successful).
+  INFO [a6335c2e] Running ~/.rvm/bin/rvm ruby-2.3.3 do bundle exec rake assets:precompile as deploy@18.216.24.164
+ DEBUG [a6335c2e] Command: cd /home/deploy/malvani_khulgya/releases/20171210170124 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm ruby-2.3.3 do bundle exec rake assets:precompile )
+ DEBUG [a6335c2e] 	rake aborted!
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	Gem::LoadError: Specified 'postgresql' for database adapter, but the gem is not loaded. Add `gem 'pg'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activerecord-4.1.4/lib/active_record/connection_adapters/connection_specification.rb:190:in `rescue in spec'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activerecord-4.1.4/lib/active_record/connection_adapters/connection_specification.rb:187:in `spec'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activerecord-4.1.4/lib/active_record/connection_handling.rb:50:in `establish_connection'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activerecord-4.1.4/lib/active_record/railtie.rb:129:in `block (2 levels) in <class:Railtie>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/lazy_load_hooks.rb:28:in `block in on_load'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/lazy_load_hooks.rb:27:in `each'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/lazy_load_hooks.rb:27:in `on_load'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activerecord-4.1.4/lib/active_record/railtie.rb:118:in `block in <class:Railtie>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/initializable.rb:30:in `instance_exec'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/initializable.rb:30:in `run'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/initializable.rb:55:in `block in run_initializers'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/initializable.rb:54:in `run_initializers'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/application.rb:300
+ DEBUG [a6335c2e] 	:in `initialize!'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/releases/20171210170124/config/environment.rb:5:in `<top (required)>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:247:in `require'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:247:in `block in require'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:232:in `load_dependency'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:247:in `require'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/application.rb:276:in `require_environment!'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/application.rb:379:in `block in run_tasks_blocks'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/sprockets-rails-2.3.3/lib/sprockets/rails/task.rb:64:in `block (2 levels) in define'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/l
+ DEBUG [a6335c2e] 	ib/thor/base.rb:466:in `start'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `load'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `<main>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	Caused by:
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	Gem::LoadError: pg is not part of the bundle. Add it to your Gemfile.
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/rubygems_integration.rb:404:in `block (2 levels) in replace_gem'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activerecord-4.1.4/lib/active_record/connection_adapters/postgresql_adapter.rb:13:in `<top (required)>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:247:in `require'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:247:in `block in require'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:232:in `load_dependency'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:247:in `require'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activerecord-4.1.4/lib/active_record/connection_adapters/connection_specification.rb:188:in `spec'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activerecord-4.1.4/lib/active_record/connection_handling.rb:50:in `establish_connection'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activerecord-4.1.4/lib/active_record/railtie.rb:129:in `block (2 levels) in <class:Railtie>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/lazy_load_hooks.rb:28:in `block in on_load'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/lazy_load_hooks.rb:27:in `each'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/lazy_load_hooks.rb:27:in `on_load'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activerecord-4
+ DEBUG [a6335c2e] 	.1.4/lib/active_record/railtie.rb:118:in `block in <class:Railtie>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/initializable.rb:30:in `instance_exec'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/initializable.rb:30:in `run'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/initializable.rb:55:in `block in run_initializers'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/initializable.rb:54:in `run_initializers'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/application.rb:300:in `initialize!'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/releases/20171210170124/config/environment.rb:5:in `<top (required)>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:247:in `require'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:247:in `block in require'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:232:in `load_dependency'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:247:in `require'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/application.rb:276:in `require_environment!'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/railties-4.1.4/lib/rails/application.rb:379:in `block in run_tasks_blocks'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/sprockets-rails-2.3.3/lib/sprockets/rails/task.rb:64:in `block (2 levels) in define'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/malvani_khulgya/shared/bundle/ruby/2.3.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems
+ DEBUG [a6335c2e] 	/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `load'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/bundle:22:in `<main>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	/home/deploy/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	Tasks: TOP => environment
+ DEBUG [a6335c2e] 	
+ DEBUG [a6335c2e] 	(See full trace by running task with --trace)
+ DEBUG [a6335c2e] 	
